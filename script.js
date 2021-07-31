@@ -19,11 +19,13 @@ $(document).ready(function () {
 // Green if the text area is not yet after the current time.
     function checkTime() {
         let currentTime = moment().hour();
+        console.log(currentTime);
        
        
         $(".time-block").each(function () {
            
             var pastTime = parseInt($(this).attr("id").split("hour")[1]);
+            console.log(pastTime);
 
             if (pastTime == currentTime) {
                 $(this).removeClass("past");
